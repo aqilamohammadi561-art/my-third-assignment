@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqila's Movie Theater 🍿</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .theater {
+      border: 8px solid #ffcc00;
+      padding: 20px;
+      box-shadow: 0 0 30px #ffcc00;
+      text-align: center;
+      background: #111;
+      border-radius: 15px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    video {
+      width: 600px;
+      max-width: 100%;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .buttons {
+      margin-top: 15px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ff0000;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffcc00;
+      color: black;
+    }
+
+    .lights {
+      margin-bottom: 10px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="theater">
+    <div class="lights">🤞✌</div>
+    <h1>🎬 Aqila's Movie Theater 🎥</h1>
+
+    <!-- Replace trailer.mp4 with your own video file -->
+    <video controls>
+      <source src="./Home (2015) makeup(360P).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="buttons">
+      <button onclick="playAgain()">▶ Play Again</button>
+      <button onclick="rateMovie()">⭐ Rate Movie</button>
+    </div>
+  </section>
+
+  <script>
+    const video = document.querySelector('video');
+
+    function playAgain() {
+      video.currentTime = 0;
+      video.play();
+    }
+
+    function rateMovie() {
+      alert('Thanks for rating the movie! 🎉');
+    }
+  </script>
+
+</body>
+</html>
